@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>meet2022</title>
+        <style >
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            #header{
+                width:93%;
+                height:auto;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                margin: 0 auto;
+            }
+            #body{
+                width:93%;
+                height:auto;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                margin: 0 auto;
+                padding-bottom: 20px;
+                
+            }
+            #headings{
+                margin: 0 auto;
+                width: 80%;
+                text-align: center;
+            }
+            
+            ul{
+                list-style-type: none;
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+                background-color: #333;
+                display: flex;
+            }
+            li{
+                
+                margin-left:5% ;
+            }
+            li a{
+                width: auto;
+                display: block;
+                color:white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover{
+                background-color: #111;
+            }
+            #card {
+                box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.2);
+                transition: 0.2s;
+                width:50%;
+                height: 300px;
+                margin: 1%;
+                border-radius: 2%;
+                background-color: white;
+                vertical-align: middle;
+            }
+            #card:hover {
+                box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+            }
+            #pic{
+                box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.2);
+                transition: 0.2s;
+            }
+            #pic:hover {
+                box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+            }
+            #aboutcard{
+                box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.2);
+                transition: 0.2s;
+                width:40%;
+                text-align: justify;
+                height: auto;
+                margin: 1%;
+                border-radius: 2%;
+                background-color: white;
+                color: white;
+                padding: 10px;
+            }
+            #aboutcard:hover {
+                box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+            }
+            #ConferenceTheme{
+                box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.2);
+                transition: 0.2s;
+                width:95%;
+                height: auto;
+                margin: 2%;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                padding: 5px;
+            }
+            #ConferenceTheme:hover {
+                box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+            }
+
+            #ConferenceCommittee{
+                transition: 0.2s;
+                display: flex;
+                flex-flow: row wrap;
+                width:95%;
+                height: auto;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.212);
+                color: black;
+                padding: 10px;
+            }
+            
+            #Committee{
+                border-radius: 10px;
+                width: 28%;
+                border-width: 2px;
+                border-color: #1f5ca9;
+                
+                padding: 5px;
+                margin-left: 3%;
+                margin-top: 3%;
+            }
+            #faculty{
+                font-weight: bold;font-size: 20px;margin-left: 3%;margin-top:2%;width:22%;
+            }
+            .event-container {
+            font-family: "Roboto", sans-serif;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            }
+            .event1
+            {
+                padding: 50px 100px;
+            }
+
+            .event1 .schedule h2
+            {
+                font-size: 36px;
+                font-weight: 500;
+                color:#000000;
+                
+            }
+            .event-container h3.year {
+            font-size: 40px;
+            font-weight: 500;
+            }
+
+            .event-container .event {
+            box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+            display: flex;
+            border-radius: 8px;
+            margin: 32px 0;
+            }
+            .event-container .event-right .event-description
+            {
+                white-space: nowrap;
+            }
+            .event-container .event-right .event-description .reg-color
+            {
+                white-space: nowrap;
+                color: #ffff00;
+
+            }
+
+            .event .event-left {
+            background: #222;
+            min-width: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eee;
+            padding: 8px 48px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px 0 0 8px;
+            }
+
+            .event .event-left .date {
+            font-size: 56px;
+            }
+
+            .event .event-left .month {
+            font-size: 16px;
+            font-weight: normal;
+            }
+
+            .event .event-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex;
+            padding: 0 24px;
+            }
+
+            .event .event-right h3.event-title {
+            font-size: 24px;
+            margin: 24px 0 10px 0;
+            color: #218bbb;
+            }
+
+            .event .event-right .event-timing {
+            background: #fff8ba;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 120px;
+            padding: 8px;
+            border-radius: 16px;
+            margin: 24px 0;
+            font-size: 14px;
+            }
+
+            .event .event-right .event-timing img {
+            height: 20px;
+            padding-right: 8px;
+            }
+
+            @media (max-width: 550px) {
+            .event {
+                flex-direction: column;
+            }
+
+            .event .event-left {
+                padding: 0;
+                border-radius: 8px 8px 0 0;
+            }
+
+            .event .event-left .event-date .date,
+            .event .event-left .event-date .month {
+                display: inline-block;
+                font-size: 24px;
+            }
+
+            .event .event-left .event-date {
+                padding: 10px 0;
+            }
+            }
+
+            
+            .contact
+            {
+                position: relative;
+                padding: 50px 100px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+                flex-direction: column;
+            }
+            .contact .content
+            {
+                max-width: 800px;
+                text-align: left;
+
+            }
+            .contact .content h2
+            {
+                font-size: 36px;
+                font-weight: 500;
+                color:#000000;
+            }
+            .contact .content p
+            {
+                font-weight: 600;
+                color:#000000;
+            }
+            .container
+            {
+                width: 100%;
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+                margin-top: 30px;
+            }
+            table, th, td {
+            border: 3px solid #1f5ca9;
+            border-collapse: collapse;
+            padding: 2px;
+            }
+            #tab1{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 2px;
+            }
+            #tab1  tr th{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 2px;
+            }
+            #tab1  tr td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 2px;
+            }
+            
+        </style>
+    </head>
+    <body style="background-color:#e1f3fc;">
+        <a name="top"></a>
+			<div id="header">
+			<div id="headings">
+                <p style="color: red;text-align: center;font-size: 28px;font-weight:bold;">International Conference on</p>
+				<p style="color: blue;text-align: center;font-size: 28px;font-weight:bold;">1st International Conference on Mechanical Engineering and Emerging Technologies</p>
+                <p style="color: #0f9d58;text-align: center;font-size: 30px;font-weight:bold;">(MEET - 2022)</p>
+                <a href="http://www.becbapatla.ac.in/" target="_blank" style="position: absolute;top:25px;Left: 4%;"><img src="res/logo.png" height="150px" width="150px"></a>
+				<p style="color: red;text-align: center;font-size: 25px;font-weight:bold;font-style: oblique;">Organized By</p>
+                <a href="" target="_blank" style="position: absolute;top:10px;right: 4%;"><img src="res\Design3.JPG" height="200px" width="150px"></a>
+                <div style="display:flex;align-items: center;justify-content: center;flex-flow: row wrap;width: 95%;">
+                <p style="align-items: center;justify-content:center;font-size: 25px;font-weight:bold;">Department of Mechanical Engineering </br>
+                        Bapatla Engineering College: Bapatla (Autonomous)
+
+                </div>
+                
+               
+            </div>
+            <ul>
+                <li><a href="#aboutP">About</a></li>
+                <li><a href="#ConferenceThemeP">Conference Theme</a></li>
+                <li><a href="#ConferenceCommitteeP">Conference Committee</a></li>
+				<li><a href="#KeynoteS">Keynote Speakers</a></li>
+                <li><a href="#GuidelinesP">Guidelines & Important Dates</a></li>
+                <li><a href="#ScheduleP">Event Schedule</a></li>
+                <li><a href="#ContactP">Contact</a></li>
+            </ul>
+            
+        </div>
+        <div id="body" style="color: whitesmoke;">
+            <div  style="display:flex;">
+                <img id="pic" style="margin: 1%;border-radius: 10px;" src="res/BEC.jpg" height="500px" width="98%">
+                
+            </div>
+            <p id="aboutP" style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">About</p>
+            <div id="about"  style="display: flex;">
+                <div id="aboutcard" style="background-color: #39b6e7;">
+                    <p style="text-align: center;font-size: 18px;font-weight:bold;">Bapatla Education Society</p></br>
+                    <p style="font-size: 90%;">Bapatla Education Society was established in 1962 and runs 
+                        7 other educational institutions including Bapatla Engineering College, Bapatla College of Arts & Sciences, Bapatla Junior college,
+                         Bapatla womens 
+                        Engineering college, Bapatla Polytechnic College, Bapatla Public School and Bapatla College of Pharmacy.</p>
+                </div>
+                <div id="aboutcard" style="background-color: #d66417;">
+                    <p style="text-align: center;font-size: 18px;font-weight:bold;">Bapatla Engineering College</p></br>
+                    <p style="font-size: 90%;">
+                        Bapatla Engineering College (Autonomous) was established by Bapatla Education Society in the year 1981 and is reckoned for its academic excellence in Engineering & Sciences. It is a constituent institution of Acharya Nagarjuna University and is one of the best private engineering institutions in the southern region. BEC offers graduate courses in 9 disciplines with total intake of above 1000 students and 5 post-graduate courses in CSE, CAD/CAM(Mech), PE(EEE), SE(CIVIL) and CESP(ECE).All departments have well equipped laboratories in addition to the common facilities of workshops, central library, state-of-the-art central computing facility, sports facilities and Innovation Centres that house research and testing facilities for industrial projects and technology labs to promote inter-disciplinary research activities.The college is NAAC accredited.
+                    </p>
+                </div>
+                <div id="aboutcard" style="background-color: #0f9d58;">
+                    <p style="text-align: center;font-size: 18px;font-weight:bold;">Department of Mechanical Engineering</p></br>
+                    <p style="font-size: 90%;">Mechanical Engineering Department was established in the year 1981. The department has present intake capacity of 120 students. Faculty in the department are highly qualified and experienced. The laboratories in the department have state of the art facilites. Mechnanical Engineering department established various centers of excellence like BOSCH, KUKA robotic center to train students in latest technologies.                        
+                    </p>
+					<p style="font-size: 90%;"> 
+						The department has exclusinve computer center equipped with high capacity servers and systems with high configuration. Mechanical related softwares like ANSYS-19.0, CREO 7.0, CATIA V5, R15, ADMSS, INVENTOR SERIES, AUTOMATION STUKIO, STAR-CD  are procured for CAD lab. Packages like Master CAM, Emco off line simulation etc. procured for CAM and Automation Lab.
+                    </p>
+					<p style="font-size: 90%;">
+						The department of Mechanical Engineering organises workshops, conferences and symposyms regularly to enrich knowledge of students and faculty and to promote good academic eco-system. The curriculum of Mechanical Engineering department is designed meticulously by considering requirements of stakeholders and industry. The curriculum follows outcome based learning. It drives students to excel in curricular, co-curricular and extra curricular activities. The department follows quality standards laid out by AICTE and other quality assuring institutions to provide quality eduction to the students. 
+The department is accredited twice by NBA.
+					</p>					
+					
+                </div>
+				
+				<div id="aboutcard" style="background-color: #0f9d58;">
+                    <p style="text-align: center;font-size: 18px;font-weight:bold;">ICMEET 2022</p></br>
+                    <p style="font-size: 90%;"> 
+						Mechanical engineering advancements have resulted in numerous applications in several important areas such as automotive, aerospace, marine, biomedical, agricultural, and energy engineering. The creation of new materials, as well as morphological investigations, structural behaviour, and unique production techniques, allowed the Indian sector to address a number of global technical difficulties in a variety of applications. It is also necessary to employ a variety of computational methods in order to comprehend the behaviour of the structure and examine the ideal resources. Materials and Mechanical Engineering concepts that are linked to many  applications will provide a possible opportunity to develop newer components to improve the quality of life. Science and technology development with interdisciplinary research capabilities fosters a  rapid growth and answer several contemporary research issues.  In this scenario, the ICMEET 2022 conference provides a suitable forum for information sharing among professionals from many fields. The dissemination of knowledge among various participants of ICMEET 2022 helps the young researchers and professionals to engage in R&D activities to bring promising yields is the society.
+                    </p>
+				</div>
+            </div>
+            <p id="ConferenceThemeP"style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">Conference Theme</p>
+            <div id="ConferenceTheme" style="text-align: justify;" >
+            <!--	<p style="font-size: 93%;">
+                    &emsp;&emsp;The primary objective of the International Conference on Innovative and Sustainable Technologies in Civil Engineering (ISTCE-2021) is to bring academicians, technocrats, engineers, researchers and students to a common platform to share their experience and research results on all aspects of sustainable Civil Engineering. It also provides a premier interdisciplinary platform to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in the fields of Sustainable Civil Engineering. Innovative and sustainable development is one of the leading civilization ideas. Innovative and Sustainability Technologies in Civil Engineering is an area that has gained importance among the researchers in the recent past. Thus, it aims at providing a premier platform for researchers, practitioners and educators to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in the fields of Sustainable Civil Engineering.      . 
+                    </br></br>  -->
+
+                    
+                      <!--  <span style="color: #34568B;font-style: bold;font-size: 20px;"> Conference Theme:</span> --></br></br>
+                       <div style="display: flex;flex-flow: row wrap;width: 100%;">
+                            This conference theme mainly includes the mechancial engineering and alllied domains. The conference theme is not only limited to: 
+                    .</br></br></br>
+							<p style="width: 100%;">1. Materials preparation and Testing </p>
+                            <p style="width: 100%;">2. Nano Technology</p>
+							<p style="width: 100%;">3. Thermal Engineering</p>
+							<p style="width: 100%;">4. Refregiration \& Air conditioning</p>
+							<p style="width: 100%;">5. Design Engineering</p>
+							<p style="width: 100%;">6. Machinining studies</p>
+							<p style="width: 100%;">7. Metallurgical studies</p>
+							<p style="width: 100%;">8. Simulation </p>
+							<p style="width: 100%;">9. Mechanical Behaviour </p>
+							<p style="width: 100%;">10. Additive Manufacturing/3D printing  </p>
+							<p style="width: 100%;">11. Optimization  </p>
+							<p style="width: 100%;">12. Automotive Engineering   </p>
+							<p style="width: 100%;">13. Solar Energy   </p>
+							<p style="width: 100%;">14. Industrial Engineering   </p>
+							<p style="width: 100%;">15.Reliability    </p>
+							<p style="width: 100%;">16.Numerical Methods in Mechanical Engineering    </p>
+							<p style="width: 100%;">17.Unconventional Machining    </p>
+							<p style="width: 100%;">18. Welding    </p>
+							<p style="width: 100%;">19. Mechatroics    </p>
+							<p style="width: 100%;">20. Aeronautical    </p>
+							<p style="width: 100%;">21. Robotics    </p>
+							<p style="width: 100%;">22. CAD/CAM    </p>
+							<p style="width: 100%;">23. Tribology    </p>
+							<p style="width: 100%;">24. Bio Medical    </p>
+							<p style="width: 100%;">25. Mechanical Engineering oriented multi discipline applications     </p>							
+                       </div>                        
+                    </p>               
+            </div>
+            
+            <p id="ConferenceCommitteeP" style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">Conference Committee</p>
+            <div id="ConferenceCommittee" >
+                <fieldset id="Committee" style="width: 45%;">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Chief Patrons</p></legend>
+                    <p style="font-weight: bold;font-size: 20px;">Sri. M. Srinivasa Rao</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">President, Bapatla Education Society.</p>
+                    </br>
+                    <p style="font-weight: bold;font-size: 20px;">Sri. Manam Nageswara Rao</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Secretary,Bapatla Education Society.</p>
+                </fieldset>
+                <div style="height: auto;width: 45%;margin-top: 3%;padding: 0px;margin-left: 3%;">
+                <fieldset id="Committee" style="width: auto;margin-left: 0px;margin-top: 0px;">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;margin-top: 0px;">Patrons</p></legend>
+                    <p style="font-weight: bold;font-size: 20px;">Dr. V. Damodar Naidu </p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Principal,Bapatla Engineering College.</p>
+                    </br>
+					 
+                    </fieldset>
+                    
+                </fieldset>
+          
+                </fieldset>
+                <!--<fieldset id="Committee" style="width: auto;margin-top: 3%;margin-left: 0px;">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Conveners</p></legend>
+                    </br>
+					<p style="font-weight: bold;font-size: 20px;">Dr. T Chandra Sekhar Rao</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Professor, Dept. of CE</p>
+                    </br>
+                    <p style="font-weight: bold;font-size: 20px;">Dr. Kunamineni Vijay</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Assistant Professor, Dept. of CE</p>
+
+                </fieldset>-->
+                 </div>
+                 
+                <fieldset id="Committee">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Convener</p></legend>
+                    <p style="font-weight: bold;font-size: 20px;">Dr. T. Nancharaiah</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Professor & HOD, Dept. of ME, BEC</p>                   
+                   
+                </fieldset>
+				 
+                <fieldset id="Committee">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Coordinators</p></legend>
+                    <p style="font-weight: bold;font-size: 20px;">Dr. P. Ravi Kumar</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Associate Professor, Dept. of ME, BEC</p>
+                    </br>
+                    <p style="font-weight: bold;font-size: 20px;">Dr. D. Sameer Kumar</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Associate Professor, Dept. of ME, BEC</p>
+                    
+                </fieldset>    
+                <fieldset id="Committee">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Co-Coordinators</p></legend>
+					<p style="font-weight: bold;font-size: 20px;">Dr. A Praveen</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Assistant Professor, Dept. of ME, BEC</p>
+                    </br>
+                    <p style="font-weight: bold;font-size: 20px;">Sri. D. Vijay Praveen</p>
+                    <p style="font-size: 18px;color: #333;font-size: 17px;">Assistant Professor, Dept. of ME, BEC</p>
+
+                </fieldset>
+
+                <fieldset id="Committee" style="width:92%;display: flex;flex-flow: row wrap;">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Organizing Committee</p></legend>
+                    <p id="faculty">Dr. M. Venkateswara Rao</br><span style="color:#333;font-weight: normal;font-size: 17px;">Professor., Dept. of ME & Dean R&D, BEC </span> </p>	
+					<p id="faculty">Dr. B. Ravi Sankar</br><span style="color:#333;font-weight: normal;font-size: 17px;">Professor, Dept. of ME, BEC. </span> </p>	
+					<p id="faculty">Dr. Ch. Lakshmi Srinivas</br><span style="color:#333;font-weight: normal;font-size: 17px;">Professor, Dept. of ME, BEC.  </span> </p>			
+					<p id="faculty">Sri. T. Siva Sankar</br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					
+					<p id="faculty">Sri. G. Kantha Prasad </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. K. Prasada Rao </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. D Narayana Chowdary </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Dr. B. Ratna Sunil </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					
+					
+					<p id="faculty">Dr. B. Ifthekar Hussain  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Dr. J. Laxmi Lalitha  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Dr. V. V. Kondaiah  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. K. Srinivasa Rao  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Assoc. Professor, Dept. of ME, BEC.</span> </p>
+					 
+					<p id="faculty">Sri. P. Uma Maheswara Rao  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. S. Vijay  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. Y. Narendra Babu  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Dr. S. Krugon  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					
+					
+					<p id="faculty">Sri. S. Ravi Kumar  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					
+					<p id="faculty">Sri. K. RajasekarBabu  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. M. PardhaSaradhi  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					
+					<p id="faculty">Sri. M. Subramanyam  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. A. Suresh  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. Ch. L. PrudhviRaz  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. G. Moshe Babu  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					<p id="faculty">Sri. V. Krishna Koundinya  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Asst. Professor, Dept. of ME, BEC.</span> </p>
+					
+					
+					
+                
+                </fieldset>
+                <fieldset id="Committee" style="width:92%;display: flex;flex-flow: row wrap;">
+                    <legend><p style="color:#1f5ca9;font-size: 20px;font-weight:bold;">Technical & Advisory Committee</p></legend>
+                    <p id="faculty">Dr. Sheshadri Sekhar </br><span style="color:#333;font-weight: normal;font-size: 17px;">, IIT Madras</span> </p>
+					<p id="faculty">Dr. L Krishnanand </br><span style="color:#333;font-weight: normal;font-size: 17px;">, NIT Warangal</span> </p>
+					<p id="faculty">Dr. K. Venkata Subbaiah  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Andhra University </span> </p>
+					
+					<p id="faculty">Dr. V. Ramachandra Raju  </br><span style="color:#333;font-weight: normal;font-size: 17px;">JNTU Kakinada  </span> </p>
+					<p id="faculty">Sri. M Prasanna Kumar  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Gujarat Electricity Board  </span> </p>
+					<p id="faculty">Dr. K. Vizaya Kumar  </br><span style="color:#333;font-weight: normal;font-size: 17px;">IIT KGP  </span> </p>
+					<p id="faculty">Dr. K. L. Narayana  </br><span style="color:#333;font-weight: normal;font-size: 17px;">KL University , Guntur  </span> </p>
+					<p id="faculty">Dr. M Ravi Kumar  </br><span style="color:#333;font-weight: normal;font-size: 17px;">MANIT , Bhopal  </span> </p>
+					<p id="faculty">Dr Anil Kumar Birru   </br><span style="color:#333;font-weight: normal;font-size: 17px;"> NIT Manipur </span> </p>
+					<p id="faculty">Dr. G Sreenivasa Rao   </br><span style="color:#333;font-weight: normal;font-size: 17px;"> GE Bengalore </span> </p>
+					<p id="faculty">Dr. Krishna K Krishnan   </br><span style="color:#333;font-weight: normal;font-size: 17px;">Wichita State University, Wichita   </span> </p>
+					<p id="faculty">Dr Palash Poddar  </br><span style="color:#333;font-weight: normal;font-size: 17px;">Principal Scientist , NML - Jamshedpur   </span> </p>
+                    
+                </fieldset>
+            </div>
+            <p id="GuidelinesP"style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">Guidelines and Important Dates</p>
+            <div id="ConferenceTheme" >
+<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 25px">
+					    Guidelines<br /> <br />
+                        
+              <ol>
+                <li>
+                  
+                  
+                All papers are subjected to peer review process and accepted papers will be published in _____ Journal.</li>
+                <li> All papers must be free from plagiarism and similarity index must be less than 15%.                  </li>
+                <li>All papers must be original and must not be submitted elsewhere.                  </li>
+                <li>Registration of atleast one author is mandatory for every paper.                  </li>
+                <li>Registraiton fee included access to all technical sessions, participation certificates and publication charges.                  </li>
+                <li>Only presented papers will be considered for journal publication.                  </li>
+                <li>Based on merit, three best papers will be given among the papers presented at the confernece.                  </li>
+              </ol> <br />
+              <p>Please visit conference web page for timely instructions.  </p>
+			
+                        
+                </p>
+			<!--
+                <p style="font-size: 18px;">
+                    <b >Instructions to Participants:-</b></br>
+                    &#9830; Invited talks will be delivered by experts from industry and academia</br>
+					&#9830; All accepted papers based on their merit given an opportunity to present orally</br>
+					&#9830; All the sessions are conducted online</br>
+					&#9830; All papers are subjected to peer review process and accepted papers will be published in <p style="color: red;font-weight:bold;font-style: oblique;">IOP: Earth and Environmental Science (indexed in SCOPUS and Web of Science).</p>
+				<p style="font-size: 18px;">
+					&#9830; All the papers must be free from plagiarism. Similarity index must be less than 20%.</br>
+					&#9830; All papers must be original and not been submitted to any other conferences or journals.</br>
+					&#9830; Registration of at least one author per paper is mandatory.</br>
+					&#9830; Registration fee includes access to all technical sessions, participation certificate and publication charges.</br>
+					&#9830; Authors must present the paper in the given time slot.</br>
+					&#9830; A one-page abstract not more than 300 words with complete details of authors and affiliations is invited from prospecting authors through the following email: <a href="mailto:istce2021@becbapatla.ac.in">istce2021@becbapatla.ac.in.</a></br>
+					&#9830; Full length papers need to be prepared by following guidelines provided by IOP publishing. Refer <a href="https://publishingsupport.iopscience.iop.org/author-guidelines-for-conference-proceedings/">https://publishingsupport.iopscience.iop.org/author-guidelines-for-conference-proceedings/</a> for detailed authour guidelines. Templete for preparing full length paper can be downloaded <a href="res/template.docx">here</a>.</br>
+                </p>
+				-->
+            </div>
+			<!-- keynote -->
+			            <p id="KeynoteS"style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">Keynote Speakers</p>
+            <div id="KeynoteS" >
+                  <div align="center">
+                    <table id="tab1" width=40% height=200px >
+                      <tr>
+                        <th style="color: #FF0000;text-align: center;font-size: 20px;font-weight:bold;;"><h4>Dr. G L Samuel</h4></th>
+                        <th style="color: #FF0000;text-align: center;font-size: 20px;font-weight:bold;margin-left: 2%;">Dr. Srinivasa Rao Gubba</th>
+                        
+                        </tr>
+                      <tr>
+                        <td><p style="display: flex;align-items: center;justify-content: center">
+                        <img src="res/KeynoteSpeaker1_Samuel.JPG" height="252px" width="350px"></p> </td>
+                        <td><span style="display: flex;align-items: center;justify-content: center"><img src="res/KeynoteSpeaker2_SreenivasaRaoGubba.JPG" alt="GSR" width="350px" height="252px"></span></td>
+                        
+                        </tr>
+                      <tr>
+                        <td> <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;"> Dr. GL.Samuel</p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;"> Professor                                  </p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">Manufacturing Engineering Section                                  </p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">Department of Mechanical Engineering                                  </p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">INDIAN INSTITUTE OF TECHNOLOGY, MADRAS
+                            Chennai – 600 036                               </p>
+                        <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">INDIA</p></td>
+                        <td><p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;"> Dr. Srinivasa Rao Gubba</p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;"> Research Scientist                                  </p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">King Abdullah University of Science and Technology            </p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">Thuwal 23955                                  </p>
+                          <p style="color: #34568B;text-align: left;font-size: 15px;font-weight:bold;margin-left: 2%;">Saudi Arabia  </p>
+                         </td>
+                        
+                        
+                        </tr>
+                      
+                      </table>
+                    
+                    
+                  </div>
+          </div>
+			<div align="center"><br />
+			  <br /><br /><br /><br /><br />
+			  <!--    -->
+		  </div>
+			<div style="display: flex;align-items: center;justify-content: center;color:black;" >
+                
+            <table id="tab1" width=40% height=200px>
+                    <caption><b>Registration Fee Details</br></br></b>
+					
+					<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 30px">
+					   under construction
+                </p>
+				</caption>
+					<!--
+                    <tr>
+                        <th></th>
+                        <th>Indian participants (Rs.)</th>
+                        <th>Foreign participants ($)</th>
+                    </tr>
+                    <tr>
+                        <th>Academia</th>
+                        <td style="text-align:center">5500</td>
+                        <td style="text-align:center">75</td>
+                    </tr>
+                    <tr>
+                        <th>Industry</th>
+                        <td style="text-align:center">7000</td>
+                        <td style="text-align:center">100</td>
+                    </tr>
+                    <tr>
+                        <th>Attendees</th>
+                        <td style="text-align:center">500</td>
+                        <td style="text-align:center">25</td>
+                    </tr>  -->
+                </table>
+            </div>
+
+            <div id="ConferenceTheme" >
+                <p style="font-size: 18px;">
+                    <b >Important Dates:-</b></br></br>
+                    <div  style="display: flex;align-items: center;justify-content: center;color:black;" >  
+					
+					<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 22px">
+					    Full length paper submission ends: 20/03/2022 </p>
+					  
+					<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 22px">
+					    Intimation of Review Reports: 27/03/2022 </p>
+					
+					<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 22px">
+					    Registration starts: 01/04/2022 </p>
+					
+					
+					<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 22px">
+					    Camera ready paper submission ends: 10/04/2022 </p>
+					<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 22px">
+					    Conference Dates: 22/04/2022 &amp; 23/04/2022
+					</p>
+                   <!--
+                        <table id="tab1" width=40% height=200px >
+                            <tr>
+                                <th>Submission of Abstract </th>
+                                <th>30<sup>th</sup> July, 2021</th>
+                            </tr>
+                            <tr>
+                                <th>Acceptance of Abstract </th>
+                                <th>10<sup>th</sup> August, 2021</th>
+                            </tr>
+                            <tr>
+                                <th>Start of Registration </th>
+                                <th>15<sup>th</sup> August, 2021</th>
+                            </tr>
+                            <tr>
+                                <th>Submission of Full Paper </th>
+                                <th>30<sup>th</sup> August, 2021</th>
+                            </tr>
+                        </table>
+						  -->
+                    </div>
+                </p>
+            </div>
+            <p id="ScheduleP" style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">Event Schedule</p>
+			<p style="display: flex;align-items: center;justify-content: center;color:red;font-size: 30px">
+					   under construction
+                </p>
+           <!--
+            <div class="event-container">
+          
+                <div class="event">
+                  <div class="event-left">
+                    <div class="event-date">
+                      <div class="date">24</div>
+                      <div class="month">September 2021</div>
+                    </div>
+                  </div>
+          
+                  <div class="event-right">
+                        <div class="event-description" style="color:#333">
+                      9:00am-9:30am: <b style="color: #218bbb;"> Inauguration</b><br><br>
+                      9:30am-10:00am: <b style="color: #218bbb;"> Inaugural address by dignitaries</b><br><br>
+                      10:00am-11:00am: <b style="color: #218bbb;"> Key note address by Invited speaker 1</b><br><br>
+					  11:00am-11:30am: <b style="color: #218bbb;">  Tea Break</b><br><br>
+                      11:30am-1:00pm: <b style="color: #218bbb;">  Keynote Address</b><br><br>
+                      12:30pm-1:30pm: <b style="color: #218bbb;">  Session 1 (Paper presentations by contributing authors)</b><br><br>
+                      1:00pm-2:00pm: <b style="color: #218bbb;">  Lunch Break</b><br><br>
+                      2:00pm-3:00pm: <b style="color: #218bbb;">  Session 2 (Paper presentations by contributing authors)</b><br><br>
+					  3:30pm-4:00pm: <b style="color: #218bbb;">  Tea Break</b><br><br>
+					  4:00pm-5:30pm: <b style="color: #218bbb;">  Session 3 (Paper presentations by contributing authors)</b><br><br>
+          
+                    </div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="event-left">
+                    <div class="event-date">
+                      <div class="date">25</div>
+                      <div class="month">September 2021</div>
+                    </div>
+                  </div>
+                  <div class="event-right">
+                        <div class="event-description" style="color:#333">
+                      9:30am-11:00am: <b style="color: #218bbb;"> Session 4 (Paper presentations by contributing authors)</b><br><br>
+                      11:00am-11:30am: <b style="color: #218bbb;"> Tea Break</b><br><br>
+                      11:30am-1:00pm: <b style="color: #218bbb;">  Session 5 (Paper presentations by contributing authors)</b><br><br>
+                      1:00pm-2:00pm: <b style="color: #218bbb;">  Lunch Break</b><br><br>
+                      2:00pm-3:00pm: <b style="color: #218bbb;">  Key note address by Invited speaker 2</b><br><br>
+                      3:00pm-4:00pm: <b style="color: #218bbb;">  Valedictory and announcing best paper awards. </b><br><br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div>
+            -->
+            </div>
+            <p id="ContactP" style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;">Contact Us</p>
+           
+            <div id="Contact" style="margin-left: 3%;color:black;margin-top: 10px;">
+            <h4> Dr. T Nancharaiah,</h4> Convener - ICMEET2022, </br> Professor & Head </br>
+			Mechanical Engineering </br>Bapatla Engineering College  </br>Bapatla, Andhra Pradesh - 522101  </br>INDIA</h4>
+			<p>E-mail:<a href="mailto: "> </a></br>
+            <p>Mobile: +91-9492715018</p></br></br>
+			 
+	        </div>
+        <p id="PublicityP" style="color: #34568B;text-align: left;font-size: 30px;font-weight:bold;margin-left: 2%;margin-top: 10px;">Publication Partner</p>
+        <div style="display: flex;align-items: center;justify-content: center;width: 100%;">
+            <a  href=" " target="_blank"><img src="res/partners.JPG" height="300px" width="500px"/></a>
+        </div>
+                
+        <div style="display: flex;align-items: center;justify-content: center;width: 100%;flex-flow: row wrap;margin-top: 50px;">
+            <a href="res/ " target="_blank" style="text-decoration: none;"><div style="height: 50px;width:250px;background-color:#1f5ca9 ;display: flex;align-items: center;justify-content: center;color:white;border-radius: 10px;">Download Full Paper Template</div></a>
+			<a href="res/brochure.pdf" style="text-decoration: none;"> <div style="height: 50px;width:200px;background-color:#1f5ca9 ;display: flex;align-items: center;justify-content: center;color:white;border-radius: 10px;margin-left: 100px;">Download Brochure</div></a>
+			
+			
+		</div>
+        <a href="#header" text="go to top"><img height="50px" width="50px" src="top.jpg" style="margin-left:90%">  </img></a>
+        </div>
+		
+        <div id="footer"></div>
+    </body>
+</html>
